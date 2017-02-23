@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  background-color: #FFFF33;
+}
+
+header{
+  color: white;
+  padding: 0.25em 10px 0.5em;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  background-color: black;
+  background-image: url("../img/Mario Background.jpg");
+  background-size: 100% 100%;
+  text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+h1 {
+	font-family: 'Press Start 2P';
+	margin: 0;
+    color: white;
+	font-weight: bold;
+    text-align: center;
+}
+
+h2{
+	font-family: 'Press Start 2P';
+	margin: 20px;
+	}
+
+/*
+  Hides the radio buttons ('input' tags) themselves, but not
+  their labels, which form the tabs.
+  
+  Also sets styles for the section tags and hides them.
+*/
+input,
+section {
+  border: 10px solid green;
+  margin: 10px;
+  display: none;
+  padding: 1px;
+  clear: both;
+}
+
+p {
+  margin: 20px;
+}
+
+.self {
+	margin: 10px;
+	border: 2px solid black; 
+	border-radius: 10px;
+	float: right; 
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+/*
+  Moves the caption for the figure image inside the image space at the bottom
+*/
+figcaption {
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  text-align: center;
+}
+figure img {
+  width: 100%;
+}
+
+
+
+/*
+  displays and styles 'label' tags (for radio button 'input' tags)
+*/
+label {
+  border: 3px solid purple;
+  display: inline-block;
+  float: left;
+  margin-bottom: 10px;
+  width: 25%;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  line-height: 3em;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+label:hover {
+  display: block;
+  float: left;
+  width: 25%;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: purple;
+  line-height: 3em;
+}
+/*
+  The radio button label tags form the 'tabs' used to show the 
+  sections - when clicked, the input tag 'checked' attribute 
+  becomes true, so the section tags with IDs 'content1-3' can
+  be targeted *in relation* to each radio button.
+
+  This changes the display of specific section elements (with
+  IDs 'content1-3') from 'none' to 'block', but *only when* the 
+  associated and preceding (~) radio button becomes 'checked'. 
+
+  For the CSS3 ~ selector see:
+  http://www.w3schools.com/cssref/sel_gen_sibling.asp
+*/
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+/*
+  Styles label elements (tabs) *only* when they're 'checked'
+*/
+[id^="tab"]:checked + label {
+  background: purple;
+  color: white;
+}
+[id^="tab"]:checked + label .fa {
+  color: white;
+}
+
+.tab-content {
+  background: #fff;
+}
+.fa {
+  margin-right: 10px;
+}
+
+
+/* --------- Basic animation --------- */
+/*
+  this can all be commented out without
+  affecting the functionality of the tabs
+*/
+
+.tab_container section * {
+  animation: fadeInScale 0.7s ease-in-out;
+}
+
+@keyframes fadeInScale {
+
+  0% { 
+  	transform: scale(0.85);
+  	opacity: 0;
+  }
+
+  100% { 
+  	transform: scale(1);
+  	opacity: 1;
+  }
+  
+}
+
+
+/* --------- List item styles --------- */
+/*
+  these styles are specific to tab 2
+*/
+.column {
+  display: inline-block;
+  width: 45%;
+}
+
+.numlist {
+  counter-reset: mylist;
+  /* 'mylist' is a (made-up) name to reset all '.numlist' elements */
+}
+.numlist li {
+  list-style-type: none;
+}
+.numlist li:before {
+  content: counter(mylist) ". ";
+  counter-increment: mylist;
+}
+.numlist2 {
+  counter-reset: mylist 4;
+}
+.numlist3 li:before,
+.numlist4 li:before {
+  counter-increment: mylist 3;
+  /* count list numbers in threes */
+}
+.numlist3 li:before {
+  /* pad numbers (or use display: inline-block;) */
+  float: left;
+  /* makes room to align 1- and 2-digit list item numbers */
+  width: 1.75em;
+}
+.numlist4 li:before {
+  float: left;
+  text-align: right;
+  /* padding combined with width aligns list items */
+  padding-right: 0.5em; 
+  width: 1.25em;
+}
+
+/* --------- The target selector --------- */
+/*
+  styles specific to tab 2
+*/
+[id^="news"]:target {
+  background-color: #e5eecc;
+  transition: all 2s ease;
+}
+
+
+/* --------- Basic responsive breakpoint --------- */
+/*
+  basic breakpoint - hides the tab text but leaves the icons visible
+*/
+@media only screen and (max-width: 900px) {
+  label span {
+    display: none;
+  }
+
+  .column {
+    display: inline-block;
+    width: 100%;
+  }
+}
