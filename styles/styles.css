@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #FFFF33;
+  background-color: #05B8CC;
 }
 
 header{
@@ -34,7 +34,32 @@ h2{
 	font-family: 'Press Start 2P';
 	margin: 20px;
 	}
+	
+h3{
+	font-family: 'Arial';
+	font-size: 2em;
+	border-top: 2px solid red;
+	color: red;
+	text-align: left;
+	text-decoration: underline;
+}
 
+section {
+  clear: both;
+  margin-top: 1.5em;
+  overflow: auto;
+}
+
+section a[href="#"] {
+  display: block;
+  color: red;
+  margin: 10px;
+  position: relative;
+  float: right;
+  margin-top: 525px;
+  text-align: right;
+  text-decoration: underline;
+}
 /*
   Hides the radio buttons ('input' tags) themselves, but not
   their labels, which form the tabs.
@@ -42,13 +67,14 @@ h2{
   Also sets styles for the section tags and hides them.
 */
 input,
-section {
-  border: 10px solid green;
-  margin: 10px;
-  display: none;
-  padding: 1px;
-  clear: both;
-}
+
+/* section { */
+  /* border: 10px solid green; */
+  /* margin: 10px; */
+  /* display: none; */
+  /* padding: 1px; */
+  /* clear: both; */
+/* } */
 
 p {
   margin: 20px;
@@ -56,28 +82,34 @@ p {
 
 .self {
 	margin: 10px;
-	border: 2px solid black; 
-	border-radius: 10px;
 	float: right; 
 }
 
 figure {
-  margin: 0;
-  position: relative;
+  width: 30%;
+  height: auto;
+  float: left;
+  border: 1px solid #333;
+  background: red;
+  color: #fff;
+  padding: 0;
+  margin: 10px;
+  border-radius: 8px;
+  resize: both;
+  overflow: hidden;
 }
 /*
   Moves the caption for the figure image inside the image space at the bottom
 */
-figcaption {
-  position: absolute;
-  padding: 10px;
-  bottom: 0;
-  background: white;
-  width: 100%;
+figure figcaption {
   text-align: center;
+  padding: 2px 6px;
 }
+
 figure img {
+  display: block;
   width: 100%;
+  height: auto;
 }
 
 
@@ -111,19 +143,7 @@ label:hover {
   background: purple;
   line-height: 3em;
 }
-/*
-  The radio button label tags form the 'tabs' used to show the 
-  sections - when clicked, the input tag 'checked' attribute 
-  becomes true, so the section tags with IDs 'content1-3' can
-  be targeted *in relation* to each radio button.
 
-  This changes the display of specific section elements (with
-  IDs 'content1-3') from 'none' to 'block', but *only when* the 
-  associated and preceding (~) radio button becomes 'checked'. 
-
-  For the CSS3 ~ selector see:
-  http://www.w3schools.com/cssref/sel_gen_sibling.asp
-*/
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
@@ -140,9 +160,21 @@ label:hover {
 [id^="tab"]:checked + label .fa {
   color: white;
 }
-
+input,
 .tab-content {
-  background: #fff;
+  /* you can use percentages for widths */
+  /*width: 490px;*/
+  clear: both;
+  padding: 1em 30px 2em; /* top, right-left, bottom */
+  background-color: white;
+  font-size: 1.25em;
+  line-height: 1.85em;
+  overflow: auto;
+  border: 10px solid brown;
+  margin: 10px;
+  display: none;
+  padding: 1px;
+  clear: both;
 }
 .fa {
   margin-right: 10px;
@@ -150,10 +182,6 @@ label:hover {
 
 
 /* --------- Basic animation --------- */
-/*
-  this can all be commented out without
-  affecting the functionality of the tabs
-*/
 
 .tab_container section * {
   animation: fadeInScale 0.7s ease-in-out;
@@ -173,63 +201,18 @@ label:hover {
   
 }
 
-
-/* --------- List item styles --------- */
-/*
-  these styles are specific to tab 2
-*/
-.column {
-  display: inline-block;
-  width: 45%;
-}
-
-.numlist {
-  counter-reset: mylist;
-  /* 'mylist' is a (made-up) name to reset all '.numlist' elements */
-}
-.numlist li {
-  list-style-type: none;
-}
-.numlist li:before {
-  content: counter(mylist) ". ";
-  counter-increment: mylist;
-}
-.numlist2 {
-  counter-reset: mylist 4;
-}
-.numlist3 li:before,
-.numlist4 li:before {
-  counter-increment: mylist 3;
-  /* count list numbers in threes */
-}
-.numlist3 li:before {
-  /* pad numbers (or use display: inline-block;) */
-  float: left;
-  /* makes room to align 1- and 2-digit list item numbers */
-  width: 1.75em;
-}
-.numlist4 li:before {
-  float: left;
-  text-align: right;
-  /* padding combined with width aligns list items */
-  padding-right: 0.5em; 
-  width: 1.25em;
-}
-
 /* --------- The target selector --------- */
 /*
   styles specific to tab 2
 */
-[id^="news"]:target {
-  background-color: #e5eecc;
-  transition: all 2s ease;
-}
+/* [id^="news"]:target { */
+  /* background-color: #e5eecc; */
+  /* transition: all 2s ease; */
+/* } */
 
 
 /* --------- Basic responsive breakpoint --------- */
-/*
-  basic breakpoint - hides the tab text but leaves the icons visible
-*/
+
 @media only screen and (max-width: 900px) {
   label span {
     display: none;
@@ -239,4 +222,22 @@ label:hover {
     display: inline-block;
     width: 100%;
   }
+}
+
+.div1, .div2 {width:700px;margin:0 auto;}
+.div1 {margin-top:30px;margin-bottom:60px;text-align:center;line-height:20px;}
+.div1 P {font-size:18px;}
+.div1 a, .div2 a {color:#07C; }
+.div1 a {margin:0 8px;}
+.div1 a.current {color:black; text-decoration:none;}
+.div2 {margin-top:70px;}
+.div2 li {padding-top:6px;padding-bottom:6px;}
+.green {color:Green;}
+.cn {font-family: "Courier New", Georgia;}
+#status {display:inline-block; margin-left:26px;line-height:50px;height:50px;vertical-align:middle;}
+
+.code
+{
+    border: dashed 1px #BCBCCB; padding:8px 12px; background-color: #F3F3F9; white-space:pre; font-family:"Courier New", Georgia;
+    font-size:12px; margin:6px 0;overflow:auto; 
 }
