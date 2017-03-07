@@ -1,5 +1,5 @@
 body {
-  background-color: #05B8CC;  
+  background-color: white;  
 }
 
 header{
@@ -44,27 +44,31 @@ h3{
 	text-decoration: underline;
 }
 
+h4{
+	font-family: 'Arial';
+	font-size: 2em;
+	margin: 10px;
+	color: black;
+	text-align: left;
+	text-decoration: underline;
+}
+
 nav {
   width: 100%;
   font-size: 1em;
   color: white;
   line-height: 2em;
   text-align: center;
-  background-color: purple;
+  background-color: black;
 }
 
 nav a:link,
 nav a:visited {
-  /*
-    20% with 5 items will fill the width - use box-sizing
-    (see bottom of this file) if necessary
-  */
   width: 25%;
   display: inline-block;
-  background-color: purple;
+  background-color: black;
   text-decoration: none;
   color: white;
-  /*border-bottom: 4px solid #565;*/
   transition: all 0.5s;
 }
 
@@ -72,10 +76,6 @@ nav a:hover,
 nav a.here  {
   background-color: white;
   color: black;
-  /*border-bottom: 4px solid #9aa;*/
-}
-nav a.here {
-  background-color: #565;
 }
 
 section {
@@ -87,7 +87,7 @@ section {
 
 section a[href="#"] {
   display: block;
-  color: red;
+  color: black;
   margin: 10px;
   position: relative;
   float: right;
@@ -106,14 +106,6 @@ section:first-child h3 {
 */
 input,
 
-/* section { */
-  /* border: 10px solid green; */
-  /* margin: 10px; */
-  /* display: none; */
-  /* padding: 1px; */
-  /* clear: both; */
-/* } */
-
 p {
   margin: 20px;
 }
@@ -128,7 +120,7 @@ figure {
   height: auto;
   float: left;
   border: 1px solid #333;
-  background: purple;
+  background: black;
   color: #fff;
   padding: 0;
   margin: 10px;
@@ -153,7 +145,7 @@ figure img {
   displays and styles 'label' tags (for radio button 'input' tags)
 */
 label {
-  border: 3px solid purple;
+  border: 3px solid black;
   display: inline-block;
   float: left;
   margin-bottom: 10px;
@@ -175,7 +167,7 @@ label:hover {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  background: purple;
+  background: black;
   line-height: 3em;
 }
 
@@ -190,7 +182,7 @@ label:hover {
   Styles label elements (tabs) *only* when they're 'checked'
 */
 [id^="tab"]:checked + label {
-  background: purple;
+  background: black;
   color: white;
 }
 [id^="tab"]:checked + label .fa {
@@ -207,19 +199,21 @@ input,
   font-size: 1.25em;
   line-height: 1.85em;
   overflow: hidden;
-  border: 10px solid red;
+  border: 10px solid black;
   margin: 10px;
   display: none;
   padding: 1px;
   clear: both;
 }
 
+/* Socal Media Buttons */
+
 .fa {
   margin-right: 10px;
 }
 
 .fa-facebook:hover {
-    opacity: 0.7;
+    background: black;
 }
 
 .fa-facebook {
@@ -234,7 +228,7 @@ input,
 }
 
 .fa-twitter:hover {
-    opacity: 0.7;
+    background: black;
 }
 
 .fa-twitter {
@@ -249,7 +243,7 @@ input,
 }
 
 .fa-linkedin:hover {
-    opacity: 0.7;
+    background: black;
 }
 
 .fa-linkedin {
@@ -263,6 +257,41 @@ input,
   margin: 10px;
 }
 
+/* Coming Soon Divs */
+
+.comingsoon {
+	width: 35%;
+	float: right;
+	border: 2px solid black;
+}
+
+.game-title{
+	margin: 0 5px 0 5px;
+	color: blue;
+	font-size: 20px;
+}
+
+.column-game{
+	border-bottom: 1px dotted gray;
+}
+
+.game-details{
+	display: table;
+}
+
+.list-count{
+	font-size: 20px;
+	color: red;
+	float:left;
+	margin: 0 5px 0 5px;
+}
+
+.date{
+    margin: 0 5px 0 0;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 /* --------- Basic animation --------- */
 
