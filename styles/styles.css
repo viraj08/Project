@@ -2,7 +2,7 @@ body {
   background-color: white;  
 }
 
-header{
+header {
   color: white;
   padding: 0.25em 10px 0.5em;
   margin: 0;
@@ -29,12 +29,12 @@ h1 {
     text-align: center;
 }
 
-h2{
+h2 {
 	font-family: 'Press Start 2P';
 	margin: 20px;
-	}
+}
 	
-h3{
+h3 {
 	font-family: 'Arial';
 	font-size: 2em;
 	border-top: 2px solid black;
@@ -44,7 +44,7 @@ h3{
 	text-decoration: underline;
 }
 
-h4{
+h4 {
 	font-family: 'Arial';
 	font-size: 2em;
 	margin: 10px;
@@ -54,78 +54,81 @@ h4{
 }
 
 nav {
-  width: 100%;
-  font-size: 1em;
-  color: white;
-  line-height: 2em;
-  text-align: center;
-  background-color: black;
+     width: 100%;
+     font-size: 1em;
+     color: white;
+     line-height: 2em;
+     text-align: center;
+     background-color: black;
 }
 
 nav a:link,
 nav a:visited {
-  width: 25%;
-  display: inline-block;
-  background-color: black;
-  text-decoration: none;
-  color: white;
-  transition: all 0.5s;
+     width: 25%;
+     display: inline-block;
+     background-color: black;
+     text-decoration: none;
+     color: white;
+     transition: all 0.5s;
 }
 
 nav a:hover,
-nav a.here  {
-  background-color: white;
-  color: black;
+nav a.here {
+     background-color: white;
+     color: black;
 }
 
 section {
-  clear: both;
-  margin-top: 1.5em;
-  margin: 10px;
-  overflow: hidden;
+     clear: both;
+     margin-top: 1.5em;
+     margin: 10px;
+     overflow: hidden;
 }
 
 section a[href="#"] {
-  display: block;
-  color: black;
-  margin: 10px;
-  position: relative;
-  float: right;
-  text-align: right;
-  text-decoration: underline;
+     display: block;
+     color: black;
+     margin: 10px;
+     position: relative;
+     float: right;
+     text-align: right;
+     text-decoration: underline;
 }
+
 table img {
-	width:250px;
-	height: 100px;
+     width:250px;
+     height: 100px;
 }
+
 table p {
-	text-align:left;
-}
-table{
-	width:100%;
-}
-table iframe{
-	width:450px;
-	height:500px;
+	 text-align:left;
 }
 
+table {
+	 width:100%;
+}
 
-
-
+table iframe {
+	 width:450px;
+	 height:500px;
+	 margin: 10px;
+}
 
 section:first-child h3 {
-  border-top: none;
+     border-top: none;
 }
+
 /*
   Hides the radio buttons ('input' tags) themselves, but not
   their labels, which form the tabs.
   
   Also sets styles for the section tags and hides them.
 */
+
 input,
 
 p {
-  margin: 20px;
+    margin: 20px;
 }
 
 .self {
@@ -134,101 +137,100 @@ p {
 }
 
 figure {
-  width: 30%;
-  height: auto;
-  float: left;
-  border: 1px solid #333;
-  background: black;
-  color: #fff;
-  padding: 0;
-  margin: 10px;
-  border-radius: 8px;
-  overflow: hidden;
+    width: 30%;
+    height: auto;
+    float: left;
+    border: 1px solid #333;
+    background: black;
+    color: #fff;
+    padding: 0;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 /*
   Moves the caption for the figure image inside the image space at the bottom
 */
-figure figcaption {
-  text-align: center;
-  padding: 2px 6px;
-}
 
-figure img {
-  display: block;
-  width: 100%;
-  height: 100%;
+figcaption {
+    text-align: center;
+    padding: 2px 6px;
 }
-
 
 /*
   displays and styles 'label' tags (for radio button 'input' tags)
 */
+
 label {
-  border: 3px solid black;
-  display: inline-block;
-  float: left;
-  margin-bottom: 10px;
-  width: 33.3%;
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  background-color: white;
-  line-height: 3em;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+    border: 3px solid black;
+    display: inline-block;
+    float: left;
+    margin-bottom: 10px;
+    width: 33.3%;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+    line-height: 3em;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
+
 label:hover {
-  display: block;
-  float: left;
-  width: 33.3%;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  background: black;
-  line-height: 3em;
+    display: block;
+    float: left;
+    width: 33.3%;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background: black;
+    line-height: 3em;
 }
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
 #tab4:checked ~ #content4 {
-  display: block;
+    display: block;
 }
 
 /*
   Styles label elements (tabs) *only* when they're 'checked'
 */
+
 [id^="tab"]:checked + label {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
+
 [id^="tab"]:checked + label .fa {
-  color: white;
+    color: white;
 }
 
 input,
 .tab-content {
-  /* you can use percentages for widths */
-  /*width: 490px;*/
-  clear: both;
-  padding: 1em 30px 2em; /* top, right-left, bottom */
-  background-color: white;
-  font-size: 1.25em;
-  line-height: 1.85em;
-  overflow: hidden;
-  border: 10px solid black;
-  margin: 10px;
-  display: none;
-  padding: 1px;
-  clear: both;
+    /* you can use percentages for widths */
+    /*width: 490px;*/
+    clear: both;
+    padding: 1em 30px 2em; /* top, right-left, bottom */
+    background-color: white;
+    font-size: 1.25em;
+    line-height: 1.85em;
+    overflow: hidden;
+    border: 10px solid black;
+    margin: 10px;
+    display: none;
+    padding: 1px;
+    clear: both;
 }
 
 /* Socal Media Buttons */
 
 .fa {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .fa-facebook:hover {
@@ -236,14 +238,14 @@ input,
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px;
+    background: #3B5998;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
 }
 
 .fa-twitter:hover {
@@ -251,14 +253,14 @@ input,
 }
 
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px;
+    background: #55ACEE;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
 }
 
 .fa-linkedin:hover {
@@ -266,68 +268,68 @@ input,
 }
 
 .fa-linkedin {
-  background: #007bb5;
-  color: white;
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px;
+    background: #007bb5;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
 }
 
-/* Coming Soon Divs */
+/* Coming Soon Divs tab 3 content */
 
-.comingsoon {
-	width: 35%;
-	float: right;
-	border: 2px solid black;
-}
+/* .comingsoon { */
+	/* width: 35%; */
+	/* float: right; */
+	/* border: 2px solid black; */
+/* } */
 
-.game-title{
-	margin: 0 5px 0 5px;
-	color: blue;
-	font-size: 20px;
-}
+/* .game-title{ */
+	/* margin: 0 5px 0 5px; */
+	/* color: blue; */
+	/* font-size: 20px; */
+/* } */
 
-.column-game{
-	border-bottom: 1px dotted gray;
-}
+/* .column-game{ */
+	/* border-bottom: 1px dotted gray; */
+/* } */
 
-.game-details{
-	display: table;
-}
+/* .game-details{ */
+	/* display: table; */
+/* } */
 
-.list-count{
-	font-size: 20px;
-	color: red;
-	float:left;
-	margin: 0 5px 0 5px;
-}
+/* .list-count{ */
+	/* font-size: 20px; */
+	/* color: red; */
+	/* float:left; */
+	/* margin: 0 5px 0 5px; */
+/* } */
 
-.date{
-    margin: 0 5px 0 0;
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-}
+/* .date{ */
+    /* margin: 0 5px 0 0; */
+    /* text-align: right; */
+    /* font-size: 18px; */
+    /* font-weight: bold; */
+/* } */
 
 /* --------- Basic animation --------- */
 
 .tab_container section * {
-  animation: fadeInScale 0.7s ease-in-out;
+     animation: fadeInScale 0.7s ease-in-out;
 }
 
 @keyframes fadeInScale {
 
   0% { 
-  	transform: scale(0.85);
-  	opacity: 0;
+  	 transform: scale(0.85);
+  	 opacity: 0;
   }
 
   100% { 
-  	transform: scale(1);
-  	opacity: 1;
+  	 transform: scale(1);
+  	 opacity: 1;
   }
   
 }
@@ -337,38 +339,40 @@ input,
 
 @media only screen and (max-width: 900px) {
   label span {
-    display: none;
+     display: none;
   }
 
   .column {
-    display: inline-block;
-    width: 100%;
+     display: inline-block;
+     width: 100%;
   }
 }
+
 table, thead, tbody, th, td, tr { 
-		display:block; 
-	}
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
+     display:block; 
+}
 	
-	th {
-		display: table-cell;
-    vertical-align: inherit;
-	}
+thead tr { 
+	 position: absolute;
+	 top: -9999px;
+	 left: -9999px;
+}
 	
+th {
+     display: table-cell;
+     vertical-align: inherit;
+}
 	
-	table img{
-		max-width:100%;
-		height:auto;
-		margin: 10px;
-	}
-	table iframe{
-		max-width:100%;
-		height:250px;
-	 } 
+table img{
+	 max-width:100%;
+	 height:auto;
+	 margin: 10px;
+}
+
+table iframe{
+	 max-width:100%;
+	 height:250px;
+} 
 
 
 
