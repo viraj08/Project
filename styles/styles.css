@@ -212,8 +212,6 @@ label:hover {
 
 input,
 .tab-content {
-    /* you can use percentages for widths */
-    /*width: 490px;*/
     clear: both;
     padding: 1em 30px 2em; /* top, right-left, bottom */
     background-color: white;
@@ -323,13 +321,13 @@ input,
 @keyframes fadeInScale {
 
   0% { 
-  	 transform: scale(0.85);
-  	 opacity: 0;
+  	transform: scale(0.85);
+  	opacity: 0;
   }
 
   100% { 
-  	 transform: scale(1);
-  	 opacity: 1;
+  	transform: scale(1);
+  	opacity: 1;
   }
   
 }
@@ -339,39 +337,39 @@ input,
 
 @media only screen and (max-width: 900px) {
   label span {
-     display: none;
+    display: none;
   }
 
   .column {
-     display: inline-block;
-     width: 100%;
+    display: inline-block;
+    width: 100%;
   }
 }
 
 table, thead, tbody, th, td, tr { 
-     display:block; 
+    display:block; 
 }
 	
 thead tr { 
-	 position: absolute;
-	 top: -9999px;
-	 left: -9999px;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
 }
 	
 th {
-     display: table-cell;
-     vertical-align: inherit;
+    display: table-cell;
+    vertical-align: inherit;
 }
 	
 table img{
-	 max-width:100%;
-	 height:auto;
-	 margin: 10px;
+	max-width:100%;
+	height:auto;
+	margin: 10px;
 }
 
 table iframe{
-	 max-width:100%;
-	 height:250px;
+	max-width:100%;
+	height:250px;
 } 
 
 
